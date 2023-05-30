@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/73f78c45f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>bookster</title>
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <div id="addBookModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">&times;</span>
+                <div class="modal-form">
+                    <input required class="text-input" type="text" name="book-info" id="title" min="1" max="50" onkeyup=enforceMinMaxTitle(this) placeholder="Book title..">
+                    <input required class="text-input" type="text" name="book-info" id="author" min="1" max="30" onkeyup=enforceMinMaxAuthor(this) placeholder="Author name..">
+                    <input required class="text-input" type="number" name="book-info" id="pages" min="1" max="9999" onkeyup=enforceMinMaxNum(this) placeholder="# of pages..">
+                    <div>
+                        <div>
+                            <input type="radio" name="book-info" id="read" value="read"></input>
+                            <label for="read">Read</label>
+                        </div>
+                        <div>
+                            <input checked type="radio" name="book-info" id="unread" value="unread"></input>
+                            <label for="unread">Unread</label>
+                        </div>
+                        
+                    </div>
+                    <button class="btn btn-transparent" id="addNewBookBtn">Add book</button>
+                </div>
+            </div>
+          </div>
+        <div class="container">
+            <section class="header">
+                <div class="header-grid">
+                    <div class="header-left">
+                        <img src="icons/icon-book.svg" alt="stacked books" srcset="">
+                        <h1>bookster.</h1>
+                    </div>
+                    <div class="header-mid">
+                        <button class="btn btn-transparent add-book" id="add-book-btn">Add more books</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="main library">
+                <div class="library-grid" id="library">
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+ </body>
+</html>
+
+<!-- <div class="add-book-form" id="add-book-form">
+    <input required type="text" name="book-info" id="title" placeholder="Book title..">
+    <input required type="text" name="book-info" id="author" placeholder="Author name..">
+    <input required type="number" name="book-info" id="pages" placeholder="# of pages..">
+    <div>
+        <input type="radio" name="book-info" id="read" value="read"></input>
+        <label for="read">Read</label>
+        <input checked type="radio" name="book-info" id="unread" value="unread"></input>
+        <label for="unread">Unread</label>
+    </div>
+    <button class="btn btn-transparent" id="add-button">Add</button>
+</div> -->
