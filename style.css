@@ -204,8 +204,12 @@ html, body {
 
 .modal-form > div {
     display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: space-between;
+    grid-template-columns: 50% 50%;
+    justify-items: flex-end;
+}
+
+.modal-form div:nth-child(1) {
+    justify-self: flex-start;
 }
 
 .close-modal {
